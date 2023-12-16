@@ -1,0 +1,4 @@
+/.ccls*
+/.vscode/settings.json
+*.a
+*.o
