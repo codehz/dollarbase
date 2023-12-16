@@ -44,12 +44,12 @@ jobs:
       - name: Create zip for release
         run: |
           mkdir include
-          cp -r $base include
+          cp -r \$base include
           mkdir -p aarch64-linux-cosmo/lib/
           cp .aarch64/libdollar.a aarch64-linux-cosmo/lib/libdollar.a
           mkdir -p x86_64-linux-cosmo/lib/
           cp libdollar.a x86_64-linux-cosmo/lib/libdollar.a
-          zip -r dollarbase.zip aarch64-linux-cosmo/lib/libdollar.a x86_64-linux-cosmo/lib/libdollar.a include/$base/*.h
+          zip -r dollarbase.zip aarch64-linux-cosmo/lib/libdollar.a x86_64-linux-cosmo/lib/libdollar.a include/\$base/*.h
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
