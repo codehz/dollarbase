@@ -9,6 +9,7 @@
 - (BOOL)$has:(SEL)selector;
 - (BOOL)$implements:(Protocol *)aProtocol;
 + (id)$alloc;
++ (id)$allocWithExtraBytes:(size_t)extraBytes;
 - (void)$dealloc;
 @end
 
