@@ -52,11 +52,11 @@
   return [[self $class] $implements:aProtocol];
 }
 
-+ (id)$alloc {
++ (instancetype)$alloc {
   return class_createInstance(self, 0);
 }
 
-+ (id)$allocWithExtraBytes:(size_t)extraBytes {
++ (instancetype)$allocWithExtraBytes:(size_t)extraBytes {
   return class_createInstance(self, extraBytes);
 }
 

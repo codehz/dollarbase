@@ -8,8 +8,8 @@
 - (BOOL)$instanceOf:(Class)aClass;
 - (BOOL)$has:(SEL)selector;
 - (BOOL)$implements:(Protocol *)aProtocol;
-+ (id)$alloc;
-+ (id)$allocWithExtraBytes:(size_t)extraBytes;
++ (instancetype)$alloc;
++ (instancetype)$allocWithExtraBytes:(size_t)extraBytes;
 - (void)$dealloc;
 @end
 
