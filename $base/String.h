@@ -3,11 +3,11 @@
 #import "./Object.h"
 
 @interface $String : $Object {
-  char *c_string;
-  unsigned int len;
+  const char *data;
+  unsigned int length;
 }
 
-- (const char *)$toCString;
-- (unsigned int)$length;
+@property(readonly) const char *data;
+@property(readonly) unsigned int length;
 
 @end
