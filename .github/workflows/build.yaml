@@ -1,6 +1,7 @@
 on:
   workflow_dispatch:
   create:
+  push:
   release:
     types: [created]
 
@@ -42,6 +43,7 @@ jobs:
             .aarch64/libdollar.a
             $base/*
       - name: Create zip for release
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
         run: |
           mkdir include
           cp -r \$base include
@@ -51,6 +53,7 @@ jobs:
           cp libdollar.a x86_64-linux-cosmo/lib/libdollar.a
           zip -r dollarbase.zip aarch64-linux-cosmo/lib/libdollar.a x86_64-linux-cosmo/lib/libdollar.a include/\$base/*.h
       - name: Upload binaries to release
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
