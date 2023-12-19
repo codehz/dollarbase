@@ -49,6 +49,12 @@ $Error *NoMemoryError;
 @end
 
 @implementation $NoMemoryError
+- (void)dealloc {
+  // skip dealloc intentionally
+  if (false) {
+    [super dealloc];
+  }
+}
 @end
 
 @implementation $StaticError

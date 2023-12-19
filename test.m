@@ -1,10 +1,10 @@
 #import "$base/Array.h"
-#import "$base/String.h"
 #import "$base/Error.h"
+#import "$base/String.h"
 #include <stdio.h>
 
 static id test(id var, int idx, va_list list) {
-  printf("%p %d %d\n", var, idx, va_arg(list, int));
+  printf("%s %d %d\n", [($String *)var data], idx, va_arg(list, int));
   return nil;
 }
 
