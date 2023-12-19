@@ -3,14 +3,14 @@
 #include <objc/objc.h>
 
 @protocol $Object
-- (Class)$class;
-- (BOOL)$equals:(id)anObject;
-- (BOOL)$instanceOf:(Class)aClass;
-- (BOOL)$has:(SEL)selector;
-- (BOOL)$implements:(Protocol *)aProtocol;
-+ (instancetype)$alloc;
-+ (instancetype)$allocWithExtraBytes:(size_t)extraBytes;
-- (void)$dealloc;
+- (Class)class;
+- (BOOL)equals:(id)anObject;
+- (BOOL)instanceOf:(Class)aClass;
+- (BOOL)has:(SEL)selector;
+- (BOOL)implements:(Protocol *)aProtocol;
++ (instancetype)alloc;
++ (instancetype)allocWithExtraBytes:(size_t)extraBytes;
+- (void)dealloc;
 @end
 
 __attribute__((objc_root_class))

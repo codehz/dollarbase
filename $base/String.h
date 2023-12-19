@@ -13,13 +13,13 @@
 @property(nonatomic, readonly) char *unsafe_data;
 @property(nonatomic, readonly) unsigned int length;
 
-+ (instancetype)$copyFrom:(const char *)data length:(unsigned int)length;
-+ (instancetype)$allocWithLength:(unsigned int)length;
-+ (instancetype)$createFromCString:(char *)data;
-+ (instancetype)$format:(const char *)format, FORMAT;
++ (instancetype)copyFrom:(const char *)data length:(unsigned int)length;
++ (instancetype)allocWithLength:(unsigned int)length;
++ (instancetype)createFromCString:(char *)data;
++ (instancetype)format:(const char *)format, FORMAT;
 
 /** # DON'T DO IT FOR CONSTANTS */
-- (void)$dealloc;
+- (void)dealloc;
 
 @end
 

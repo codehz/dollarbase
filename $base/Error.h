@@ -11,8 +11,8 @@
 #define FORMAT ... __attribute__((format(printf, 1, 2)))
 @interface $Error : $Object <$Error>
 
-+ (instancetype)$message:(char const *)message;
-+ (instancetype)$format:(char const *)format, FORMAT;
++ (instancetype)message:(char const *)message;
++ (instancetype)format:(char const *)format, FORMAT;
 
 @end
 

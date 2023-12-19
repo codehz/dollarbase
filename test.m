@@ -11,13 +11,13 @@ static id test(id var, int idx, va_list list) {
 int main() {
   $Array *list = $Array(@"123", @"456");
   @try {
-    [list $push:@"123"];
+    [list push:@"123"];
     printf("%p %d\n", list, list.length);
-    [list $foreach:test, 1];
+    [list foreach:test, 1];
     @throw NoMemoryError;
   } @catch ($Error *e) {
     printf("%s\n", e.message);
   } @finally {
-    [list $deallocIgnoreContents];
+    [list deallocIgnoreContents];
   }
 }
