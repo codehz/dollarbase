@@ -1,6 +1,6 @@
 #pragma once
 
-#import "./Object.h"
+#import "Object.h"
 
 #define FORMAT ... __attribute__((format(printf, 1, 2)))
 
